@@ -1,4 +1,5 @@
 const editbutton = document.querySelector("#sizebutton");
+const clearbutton = document.querySelector("#clearbutton");
 const container = document.querySelector("#container");
 
 let size = 16;
@@ -15,6 +16,11 @@ editbutton.onclick = () => {
     generateGrid(size);
 }
 
+clearbutton.onclick = () => {
+    deleteGrid();
+    generateGrid(size);
+}
+
 function deleteGrid() {
     while(container.firstChild) {
         container.removeChild(container.firstChild);
@@ -25,14 +31,14 @@ function generateGrid(size) {
     container.style.cssText = `grid-template-columns: repeat(${size}, minmax(auto, auto));`;
     for(let i = 0; i < (size*size); i++) {
         const div = document.createElement("div");
-        div.setAttribute("style", "max-height: 100%; width: 100%;");
+        div.setAttribute("style", "max-height: 100%; max-width: 100%;");
         div.onmouseover = () => div.style.backgroundColor = "white";
         container.appendChild(div);
     }
 }
 
 function colorize() {
-    
+
 }
 
 

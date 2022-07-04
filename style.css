@@ -1,14 +1,38 @@
 body {
     margin: 0;
     background-color:rgb(51, 59, 66);
+    height: 100vh;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+#header div {
+    font-size: 2em;
+    color: white;
 }
 
 #main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    
+    gap: 20px;
+    margin-left: -5%;
+}
+
+#menu {
+    border: 1px solid white;
+    height: 300px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
