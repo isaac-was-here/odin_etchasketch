@@ -25,10 +25,14 @@ function generateGrid(size) {
     container.style.cssText = `grid-template-columns: repeat(${size}, minmax(auto, auto));`;
     for(let i = 0; i < (size*size); i++) {
         const div = document.createElement("div");
-        div.setAttribute("style", "height: 10px; width: 10px;");
+        div.setAttribute("style", "max-height: 100%; width: 100%;");
         div.onmouseover = () => div.style.backgroundColor = "white";
         container.appendChild(div);
     }
+}
+
+function colorize() {
+    
 }
 
 
