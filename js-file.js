@@ -2,6 +2,8 @@ const editbutton = document.querySelector("#sizebutton");
 const clearbutton = document.querySelector("#clearbutton");
 const container = document.querySelector("#container");
 
+// const radios = document.querySelectorAll("input[name='brush']");
+
 let size = 16;
 generateGrid(size);
 

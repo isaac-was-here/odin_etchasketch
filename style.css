@@ -4,6 +4,16 @@ body {
     height: 100vh;
 }
 
+@font-face {
+    font-family: myFont;
+    src: url(fonts/Druk-Wide-Bold.ttf);
+}
+
+#header, #main, button {
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
 #header {
     display: flex;
     justify-content: center;
@@ -13,16 +23,14 @@ body {
 
 #header div {
     font-size: 2em;
-    color: white;
+    font-family: myFont, Helvetica, Arial; 
 }
 
 #main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     gap: 20px;
-    margin-left: -5%;
 }
 
 #menu {
@@ -34,12 +42,18 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    box-shadow: 0 0 20px black;
 }
 
 button {
     border: solid rgb(92, 92, 92) 1px;
-    background-color:transparent;
-    color: white;
+    background-color:transparent;  
+    font-size: 1em;
+    min-width: 120px;
+}
+
+#radio {
+    min-width: 120px;
 }
 
 #container {
@@ -47,6 +61,7 @@ button {
     display: grid;
     height: 500px;
     width: 500px;
+    box-shadow: 0 0 20px black;
 }
 
 #container div {
